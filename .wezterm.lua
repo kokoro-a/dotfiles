@@ -29,7 +29,7 @@ config.launch_menu = {
 }
 
 
-config.font = wezterm.font("HackGen Console NFJ", {weight="Regular", stretch="Normal", style="Normal"})
+config.font = wezterm.font("HackGen Console NF", {weight="Regular", stretch="Normal", style="Normal"})
 config.color_scheme = 'Tokyo Night'
 
 config.keys = {
