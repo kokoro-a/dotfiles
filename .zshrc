@@ -111,3 +111,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 . $HOME/.cargo/env
 . $HOME/.zshrc.local
+
+git -C $HOME/.config/nvim pull --ff-only > /dev/null
+git -C $HOME/dotfiles pull --ff-only > /dev/null
+
