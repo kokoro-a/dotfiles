@@ -49,4 +49,6 @@ config.mouse_bindings = {
   },
 }
 
+config.window_decorations = "RESIZE"
+
 return config
