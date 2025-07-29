@@ -30,7 +30,7 @@ config.launch_menu = {
 
 
 config.font = wezterm.font("HackGen Console NF", {weight="Regular", stretch="Normal", style="Normal"})
-config.color_scheme = 'Tokyo Night'
+config.color_scheme = 'nightfox'
 
 config.keys = {
   -- Ctrl+Shift+L で起動メニューを開く
