@@ -33,7 +33,6 @@ config.font = wezterm.font("HackGen Console NF", {weight="Regular", stretch="Nor
 config.color_scheme = 'nightfox'
 
 config.keys = {
-  -- Ctrl+Shift+L で起動メニューを開く
   {
     key = 'l',
     mods = 'CTRL|SHIFT',
