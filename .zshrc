@@ -112,6 +112,14 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 . $HOME/.cargo/env
 . $HOME/.zshrc.local
 
+if grep -q WSL /proc/version 2>/dev/null; then
+  echo "Setting up WSL environment..."
+  alias pwsh="powershell.exe"
+  alias xls="/mnt/c/Program\ Files/Microsoft\ Office/root/Office16/EXCEL.EXE"
+  alias expl="explorer.exe"
+fi
+
+echo "Pulling latest changes for dotfiles and nvim configuration..."
 git -C $HOME/.config/nvim pull --ff-only &
 git -C $HOME/dotfiles pull --ff-only &
 
