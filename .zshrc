@@ -123,3 +123,5 @@ echo "pulling latest changes for dotfiles and nvim configuration..."
 (git -C $HOME/.config/nvim pull --ff-only > /dev/null &)
 (git -C $HOME/dotfiles pull --ff-only > /dev/null &)
 
+
+. "$HOME/.local/bin/env"
