@@ -7,26 +7,32 @@ if wezterm.config_builder then
 end
 
 config.default_domain = "local"
-config.default_prog = { 'powershell.exe' }
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+    config.default_prog = { 'powershell.exe' }
+    config.launch_menu = {
+      {
+        label = 'PowerShell',
+        args = { 'powershell.exe' },
+      },
+      {
+        label = 'PowerShell (Admin)',
+        args = { 'powershell.exe', '-Command', 'Start-Process', 'powershell', '-Verb', 'RunAs' },
+      },
+      {
+        label = 'WSL',
+        args = { 'wsl.exe' },
+      },
+      {
+        label = 'Command Prompt',
+        args = { 'cmd.exe' },
+      },
+    }
+end
+if wezterm.target_triple == "x86_64-unknown-linux-gnu" then
+    config.default_prog = { 'zsh' }
+end
 
-config.launch_menu = {
-  {
-    label = 'PowerShell',
-    args = { 'powershell.exe' },
-  },
-  {
-    label = 'PowerShell (Admin)',
-    args = { 'powershell.exe', '-Command', 'Start-Process', 'powershell', '-Verb', 'RunAs' },
-  },
-  {
-    label = 'WSL',
-    args = { 'wsl.exe' },
-  },
-  {
-    label = 'Command Prompt',
-    args = { 'cmd.exe' },
-  },
-}
+
 
 
 config.font = wezterm.font("HackGen Console NF", {weight="Regular", stretch="Normal", style="Normal"})
