@@ -6,3 +6,4 @@
 echo "pulling dotfiles..."
 Start-Job -ScriptBlock { git -C $HOME/.config/nvim pull --ff-only }
 Start-Job -ScriptBlock { git -C $HOME/dotfiles pull --ff-only }
+oh-my-posh init pwsh | Invoke-Expression
